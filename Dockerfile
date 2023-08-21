@@ -4,8 +4,7 @@ WORKDIR /ProjectTest/CapstoneProject
 
 RUN #hadolint ignore=DL3013 &&\
     pip install --upgrade pip &&\
-    pip install nginx &&\
-    pip install --trusted-host pypi.python.org -r requirements.txt
+    pip install nginx 
 
 COPY nginx.config ./ProjectTest/CapstoneProject/nginx.config
 COPY ./www ./ProjectTest/CapstoneProject/www
